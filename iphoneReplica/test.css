@@ -1,0 +1,471 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0%;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'SF Pro Display'sans-serif;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 2.2rem;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1400;
+    height: 4.4rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(2rem);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -1rem;
+}
+
+.nav-list-mobile {
+    display: none;
+}
+
+.nav-link {
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 0 1rem;
+    transition: opacity .5s;
+}
+
+.nav-link:hover {
+    opacity: .7;
+}
+
+.nav-link-apple {
+    width: 1.6rem;
+    height: 4.4rem;
+    background: url("./image/apple.svg") center no-repeat;
+}
+
+.nav-link-search {
+    width: 1.6rem;
+    height: 4.4rem;
+    background: url("./image/search.svg") center no-repeat;
+}
+
+.nav-link-bag {
+    width: 1.4rem;
+    height: 4.4rem;
+    background: url("./image/bag.svg") center no-repeat;
+}
+
+/* iPhone 11 pro section */
+
+.iphone-11-pro {
+    background: url('./image/iphone_11_pro_large.jpg');
+    margin-top: 4.4rem;
+}
+
+.title {
+    color: #fff;
+    text-align: center;
+    padding-top: 5.5rem;
+}
+
+.title-heading {
+    font-size: 5.5rem;
+    line-height: 1.071;
+    letter-spacing: -.005;
+
+}
+
+.title-sub-heading {
+    font-size: 2.65rem;
+    margin-top: .6rem;
+    letter-spacing: .008rem;
+    font-size: 400;
+}
+
+.title-price {
+    font-size: 1.7rem;
+    color: #888;
+    margin-top: .68rem;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.cta-link {
+    color: #66bbff;
+    font-size: 1.8rem;
+    display: inline-block;
+}
+
+.cta-link:nth-child(2) {
+    margin-left: 2.6rem;
+}
+
+.cta-link:hover {
+    border-bottom: 2px solid #66bbff;
+}
+
+/* iPhone 11 section */
+.iphone-11 {
+    background: url('./image/iphone_11_large.jpg') center no-repeat;
+}
+
+.title-darker {
+    color: #000;
+}
+
+.cta-link-darker {
+    color: #0070c9;
+}
+
+.cta-link-darker:hover {
+    border-bottom-color: #0070c9;
+}
+
+
+/* watch section */
+.watch {
+    background: url('./image/watch_large.jpg') center no-repeat;
+}
+
+.title-heading-watch {
+    height: 7.8rem;
+    background: url('./image/logo_watch_large.png') center no-repeat;
+    background-size: auto 7.8rem;
+    margin-top: 1.6rem;
+
+}
+
+/* moved to the bottom */
+.hero {
+    background-size: auto 73.6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: .6rem solid #fff;
+    border-bottom: .6rem solid #fff;
+    height: 69.2rem;
+}
+
+.iphone-11-pro {
+    border-top: none;
+}
+
+/* end */
+
+@media screen and (max-width:1068px) {
+    .iphone-11-pro {
+        background: url('./image/iphone_11_pro_small.jpg');
+    }
+
+    .iphone-pro {
+        background: url('./image/iphone_11_small.jpg');
+    }
+
+    .watch {
+        background: url('./image/watch_small.jpg');
+    }
+
+    .hero {
+        height: 65rem;
+        background-size: auto 69.8rem;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+    }
+
+    .title-heading {
+        font-size: 4.4rem;
+    }
+
+    .title-sub-heading {
+        font-size: 2.2rem;
+    }
+
+    .cta-link:nth-child(2) {
+        margin-left: 2rem;
+    }
+
+    .title-heading-watch {
+        height: 6.2rem;
+        background: url('./image/logo_watch_medium.png') center no-repeat;
+        background-size: auto 6.2rem;
+
+    }
+}
+
+@media (max-width:767px) {
+    header {
+        height: 4.5rem;
+        transition: background .36s cubic-bezier(0.32, 0.08, 0.024, 1),
+            height .36s cubic-bezier(0.32, 0.08, 0.024, 1);
+    }
+
+    header .container {
+        padding: 0;
+    }
+
+    .iphone-11-pro {
+        margin-top: 4rem;
+    }
+
+    /* .nav-list-larger{
+        display: none;
+    } */
+    .nav-list-mobile {
+        display: flex;
+
+    }
+
+    .nav-item {
+        width: 4.8rem;
+        height: 4.8rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-item-hidden {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: relative;
+        z-index: 1500;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .line {
+        position: absolute;
+        width: 1.7rem;
+        height: .2rem;
+        background: #fff;
+        transition: margin-top .3192s cubic-bezier(0.04, 0.04, 0.12, 0.98);
+    }
+
+    .line-top {
+        margin-top: 3px;
+    }
+
+    .line-center {
+        margin-top: -4px;
+    }
+
+    .line-bottom {
+        margin-top: -1rem;
+    }
+
+    .active .line-top {
+        margin-top: 0;
+        transform: rotate(45deg);
+        transition: transform .3192s .1s cubic-bezier(0.04, 0.04, 0.12, 0.98);
+
+    }
+
+    .active .line-center {
+        opacity: 0;
+
+    }
+
+    .active .line-bottom {
+        margin-top: 0;
+        transform: rotate(-45deg);
+        transition: transform .3192s .1s cubic-bezier(0.04, 0.04, 0.12, 0.98);
+
+    }
+
+    header.active {
+        height: 100%;
+        background-color: #000;
+    }
+
+    .nav-link-apple {
+        width: 1.8rem;
+        height: 4.8rem;
+        position: relative;
+        z-index: 1500;
+    }
+
+    .nav-link-bag {
+        width: 1.8rem;
+        height: 4.8rem;
+        position: relative;
+        z-index: 1500;
+        transition: opacity .3s;
+    }
+
+    .nav {
+        position: relative;
+    }
+
+    .nav-list-larger {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        display: none;
+        padding: 5.5rem 8rem;
+        z-index: 1000;
+        box-sizing: border-box;
+        transition: opacity .3s;
+    }
+
+    .active .nav-list-larger {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        display: block;
+        padding: 8rem 5rem;
+        z-index: 1000;
+        box-sizing: border-box;
+        transition: opacity 3s;
+    }
+    .nav-list-larger .nav-item {
+        width: 300px;
+        justify-content: center;
+        margin-left: 35px;
+    }
+
+    .nav-list-larger .nav-item:nth-child(9) {
+        border-bottom: none;
+    }
+    .active  .nav-list-larger .nav-item{
+        transition: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+        from{opacity: 0;}to{opacity: 1;}
+    }
+}
+
+/*  */
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    
+}
+.
+.container .iphone-11{
+    height: 40rem;
+}
+
+/* footer */
+footer {
+    margin-top: .3rem;
+    background-color: rgba(189, 189, 189, 0.97);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+footer .footer-info {
+    border-bottom: 1px solid rgba(97, 97, 97, 1);
+}
+
+.footer-info h4 {
+    margin: .8rem;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    padding: .4rem;
+    font-size: 1rem;
+    color: #808080;
+}
+
+.explore {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    padding: 1rem;
+
+}
+
+.explore ul li {
+    list-style: none;
+    font-size: 14px;
+    padding-top: .4rem;
+}
+
+.explore ul li a {
+    color: #383838;
+}
+
+.explore .heading-darken {
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.retailer-container {
+    border-bottom: 1px solid rgba(97, 97, 97, 1);
+}
+ .heading-darken .darken-1{
+    margin-top: .3rem;
+}
+ 
+.retailer-container span a {
+    margin-top: .5rem;
+    padding: 6px;
+    margin-left: 35px;
+}
+
+@media (max-width:767px){
+    .explore {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        margin: 2rem 0;
+        padding: .5rem;
+    }
+    .explore .heading-darken .darken-1{
+        margin-top: px;
+    }
+    .retailer-container span a {
+        margin-top: .1rem;
+        padding: 10px;
+        margin-left: 1px;
+        font-size: px;
+    }   
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}
+
+.developer{
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    float: right;
+}
+.developer span{
+    text-align: end;
+    border-bottom: 1px solid black;
+}
